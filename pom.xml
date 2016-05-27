@@ -10,7 +10,7 @@
 	<properties>
 	
 		<!-- Version de Java -->
-		<java.version>1.6</java.version>
+		<java.version>1.7</java.version>
 		
 		<!-- Version de modulos de spring -->
 		<spring.version>4.2.6.RELEASE</spring.version>

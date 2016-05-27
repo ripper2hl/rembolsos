@@ -28,6 +28,25 @@
 	    <param-name>debug</param-name>
 	    <param-value>true</param-value>
 	  </init-param>
+	  
+		<!-- Enables <script> remoting -->
+		<init-param>
+		  <param-name>allowScriptTagRemoting</param-name>
+		  <param-value>true</param-value>
+		</init-param>
+		
+		<!-- Disables DWR's CSRF protection -->
+		<init-param>
+		  <param-name>crossDomainSessionSecurity</param-name>
+		  <param-value>false</param-value>
+		</init-param>
+		
+		<!-- Enables GET requests which are necessary for X-domain calls -->
+		<init-param>
+		  <param-name>allowGetForSafariButMakeForgeryEasier</param-name>
+		  <param-value>true</param-value>
+		</init-param>	  
+	  
 	</servlet>
 	<servlet-mapping>
 	  <servlet-name>dwr</servlet-name>
