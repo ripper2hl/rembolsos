@@ -179,7 +179,7 @@
 	    <profile>
 	        <id>openshift</id>
 	        <build>
-	            <finalName>yourAppName</finalName>
+	            <finalName>rembolsos</finalName>
 	            <plugins>
 	                <plugin>
 	                    <artifactId>maven-war-plugin</artifactId>
