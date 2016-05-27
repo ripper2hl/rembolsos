@@ -18,7 +18,12 @@
 	    http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd	    
 	    http://www.directwebremoting.org/schema/spring-dwr http://www.directwebremoting.org/schema/spring-dwr-3.0.xsd">
 	
-	<jee:jndi-lookup id="dataSource" jndi-name="java:comp/env/jdbc/Rembolsos"/>	
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	 	<property name="driverClassName" value="org.h2.Driver" />
+	 	<property name="url" value="jdbc:h2:mem:test;DB_CLOSE_DELAY=-1" />
+	 	<property name="username" value="sa" />
+	 	<property name="password" value="" />
+	</bean>		
 
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">

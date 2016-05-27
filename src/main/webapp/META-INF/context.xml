@@ -1,7 +1,0 @@
-<Context path="todo" docBase="todo"
-	reloadable="true" crossContext="true">
-	<Resource name="jdbc/Rembolsos" auth="Container"
-		type="javax.sql.DataSource" maxActive="100" maxIdle="30" maxWait="10000"
-		username="sa" password="" driverClassName="org.h2.Driver"
-		url="jdbc:h2:mem:test;DB_CLOSE_DELAY=-1" />
-</Context>
