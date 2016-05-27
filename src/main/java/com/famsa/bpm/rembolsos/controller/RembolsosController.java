@@ -7,13 +7,16 @@ import org.springframework.stereotype.Controller;
 import com.famsa.bpm.rembolsos.model.Rembolso;
 import com.famsa.bpm.rembolsos.repository.RembolsoRepository;
 
-@Controller
 @RemoteProxy
+@Controller
 public class RembolsosController {
+	
+	@Autowired
+	RembolsoRepository rembolsoRepository;
 	
 	public Rembolso buscarRembolso(){
 		Rembolso rembolso = new Rembolso();
 		rembolso.setNombre("Hola" + System.currentTimeMillis());
-		return rembolso;
+		return rembolsoRepository.save(rembolso);
 	}
 }

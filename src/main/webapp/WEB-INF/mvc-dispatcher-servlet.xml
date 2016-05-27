@@ -25,7 +25,7 @@
 		<property name="persistenceUnitName" value="persistenceUnit" />
 		<property name="packagesToScan">
 			<list>
-				<value>com.famsa.bpm.rembolsos.model.Rembolso</value>
+				<value>com.famsa.bpm.rembolsos.model</value>
 			</list>
 		</property>
 		<property name="dataSource" ref="dataSource" />
@@ -52,13 +52,11 @@
 	
 	<context:component-scan base-package="com.famsa.bpm" />	
 	
-<!-- 	<data:repositories base-package="com.famsa.bpm.rembolsos.repository" /> -->
+	<data:repositories base-package="com.famsa.bpm.rembolsos.repository" />
 	
 	<dwr:configuration>
 		<dwr:convert type="hibernate3" class="com.famsa.bpm.rembolsos.model.*"></dwr:convert>
 	</dwr:configuration>
-	
-	<dwr:controller id="dwrController" debug="true" />
 	
 	<dwr:annotation-config id="dwrAnnotationConfig" />
 	
